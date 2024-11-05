@@ -1,3 +1,3 @@
 // utils barrel file
 
-export * from './utils/format/commaizeNumber';
+export * from './utils/formats/commaizeNumber';
