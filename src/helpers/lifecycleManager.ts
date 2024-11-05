@@ -27,20 +27,20 @@ export function onEvent(event: LifecycleEvent, callback: () => void) {
 // 각 이벤트 발생 시 콜백 실행
 document.addEventListener('DOMContentLoaded', () => {
   eventFired.DOMContentLoaded = true;
-  lifecycleEvents.DOMContentLoaded?.forEach(callback => callback());
+  lifecycleEvents.DOMContentLoaded?.forEach((callback) => callback());
 });
 
 window.addEventListener('load', () => {
   eventFired.load = true;
-  lifecycleEvents.load?.forEach(callback => callback());
+  lifecycleEvents.load?.forEach((callback) => callback());
 });
 
 window.addEventListener('beforeunload', () => {
   eventFired.beforeunload = true;
-  lifecycleEvents.beforeunload?.forEach(callback => callback());
+  lifecycleEvents.beforeunload?.forEach((callback) => callback());
 });
 
 window.addEventListener('unload', () => {
   eventFired.unload = true;
-  lifecycleEvents.unload?.forEach(callback => callback());
+  lifecycleEvents.unload?.forEach((callback) => callback());
 });
