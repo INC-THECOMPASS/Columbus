@@ -1,2 +1,2 @@
 // formats barrel file
-export * from './testFunction';
+export * from './disableDrag';
