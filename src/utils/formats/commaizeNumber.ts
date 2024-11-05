@@ -3,8 +3,8 @@ import { validateElementsAttr, validateElementsText } from '../../helpers/valida
 import { onEvent } from '../../helpers/lifecycleManager';
 
 export const commaizeNumber = () => {
-  const elements = getElements('[tc-format-string]');
-  const hasAttr = validateElementsAttr(elements, 'tc-format-string', 'comma');
+  const elements = getElements('[tc-format-number]');
+  const hasAttr = validateElementsAttr(elements, 'tc-format-number', 'comma');
 
   if (hasAttr) {
     elements.forEach((elem: Element) => {
