@@ -1,12 +1,27 @@
 import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 
-export default {
-  input: 'src/index.ts',
+// 빌드할 파일 목록을 정의하는 부분
+const entries = [
+  {
+    input: 'src/utils/formats/index.ts',
+    output: 'formats',
+    name: 'columbusFormats'
+  },
+  {
+    input: 'src/utils/functions/index.ts',
+    output: 'functions',
+    name: 'columbusFunctions'
+  },
+];
+
+// 공통 설정을 세팅 하는 부분
+const createConfig = ({ input, output, name }) => ({
+  input,
   output: {
-    file: 'dist/index.min.js',
+    file: `dist/${output}.min.js`,
     format: 'umd',
-    name: 'Columbus',
+    name,
     sourcemap: true
   },
   plugins: [
@@ -15,4 +30,6 @@ export default {
     }),
     terser()
   ]
-};
+});
+
+export default entries.map(createConfig);
