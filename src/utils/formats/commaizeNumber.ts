@@ -1,11 +1,5 @@
-import {
-  getElementAttr,
-  getElements,
-} from '../../helpers/getter';
-import {
-  validateElementAttr,
-  validateText,
-} from '../../helpers/validator';
+import { getElementAttr, getElements } from '../../helpers/getter';
+import { validateElementAttr, validateText } from '../../helpers/validator';
 import { onEvent } from '../../helpers/lifecycleManager';
 
 export const commaizeNumber = () => {

@@ -11,5 +11,6 @@ export const getElementAttr = (
   element: Element,
   customAttr: string,
 ): string => {
-  return validateText(customAttr);
+  const attr = element.getAttribute(validateText(customAttr));
+  return validateText(attr);
 };
