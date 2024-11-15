@@ -31,8 +31,6 @@ export default [
       'prettier/prettier': 'error',
 
       // custom rules
-      'max-depth': ['error', 2],
-      'max-lines-per-function': ['error', 15],
       'operator-linebreak': ['error', 'after'],
       'no-unused-expressions': ['error', { allowTernary: true }],
     },
