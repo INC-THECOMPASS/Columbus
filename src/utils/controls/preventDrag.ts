@@ -13,7 +13,7 @@ const preventDrag = () => {
     const attr = getElementAttr(elem, customAttr);
 
     if (validateAttr(attr, attrValue)) {
-      disableDrag(elem);
+      disableDrag();
     }
   });
 };

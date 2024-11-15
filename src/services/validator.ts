@@ -11,10 +11,22 @@ const validateElements = (
 };
 
 const validateAttr = (attr: string, value: string): boolean => {
-  return attr === value;
+  const isValidAttr = attr === value;
+
+  if (!isValidAttr) {
+    throw new Error(PROMPT_MSG.wrong_attr);
+  }
+
+  return isValidAttr;
 };
 
 const validateAttrInList = (attr: string, validAttrs: string[]): boolean => {
+  const isValidAttr = validAttrs.includes(attr);
+
+  if (isValidAttr) {
+    throw new Error(PROMPT_MSG.wrong_attr);
+  }
+
   return validAttrs.includes(attr);
 };
 

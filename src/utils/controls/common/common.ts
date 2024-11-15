@@ -1,19 +1,19 @@
-const disableContextMenu = (elem: Element): void => {
-  elem.addEventListener('contextmenu', (event) => {
+const disableContextMenu = (): void => {
+  document.addEventListener('contextmenu', (event) => {
     event.preventDefault();
   });
 };
 
-const disableDrag = (elem: Element): void => {
-  elem.addEventListener('dragstart', (event) => {
+const disableDrag = (): void => {
+  document.addEventListener('dragstart', (event) => {
     event.preventDefault();
   });
 };
 
-const disableKeydown = (elem: Element): void => {
-  elem.addEventListener('keydown', (event) => {
+const disableKeydown = (): void => {
+  document.addEventListener('keydown', (event) => {
     event.preventDefault();
   });
 };
 
-export {disableContextMenu, disableDrag, disableKeydown}
+export { disableContextMenu, disableDrag, disableKeydown };

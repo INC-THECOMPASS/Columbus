@@ -13,7 +13,7 @@ const preventKeydown = () => {
     const attr = getElementAttr(elem, customAttr);
 
     if (validateAttr(attr, attrValue)) {
-      disableKeydown(elem);
+      disableKeydown();
     }
   });
 };

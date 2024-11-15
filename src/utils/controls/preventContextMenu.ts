@@ -13,7 +13,7 @@ const preventContextMenu = () => {
     const attr = getElementAttr(elem, customAttr);
 
     if (validateAttr(attr, attrValue)) {
-      disableContextMenu(elem);
+      disableContextMenu();
     }
   });
 };
