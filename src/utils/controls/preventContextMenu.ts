@@ -1,6 +1,6 @@
-import { onEvent } from '../../helpers/lifecycleManager';
-import { getElementAttr, getElements } from '../../helpers/getter';
-import { validateAttr } from '../../helpers/validator';
+import { onEvent } from '../../services/lifecycleManager';
+import { getElementAttr, getElements } from '../../services/getter';
+import { validateAttr } from '../../services/validator';
 import { disableContextMenu } from './common/common';
 
 const preventContextMenu = () => {

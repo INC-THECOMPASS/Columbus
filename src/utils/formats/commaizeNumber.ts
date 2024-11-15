@@ -1,6 +1,6 @@
-import { getElementAttr, getElements } from '../../helpers/getter';
-import { validateAttr, validateText } from '../../helpers/validator';
-import { onEvent } from '../../helpers/lifecycleManager';
+import { getElementAttr, getElements } from '../../services/getter';
+import { validateAttr, validateText } from '../../services/validator';
+import { onEvent } from '../../services/lifecycleManager';
 
 const commaizeNumber = () => {
   const customAttr = 'tc-format-number';

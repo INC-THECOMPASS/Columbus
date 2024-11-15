@@ -1,4 +1,4 @@
-import PROMPT_MSG from '../core/constants';
+import PROMPT_MSG from '../config/constants';
 
 const validateElements = (
   elements: NodeListOf<Element> | null,
@@ -16,7 +16,7 @@ const validateAttr = (attr: string, value: string): boolean => {
 
 const validateAttrInList = (attr: string, validAttrs: string[]): boolean => {
   return validAttrs.includes(attr);
-}
+};
 
 const validateText = (text: string | null): string => {
   if (!text) {

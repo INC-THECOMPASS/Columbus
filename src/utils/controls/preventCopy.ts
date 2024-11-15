@@ -1,12 +1,12 @@
-import { onEvent } from '../../helpers/lifecycleManager';
-import { getElementAttr, getElements } from '../../helpers/getter';
-import { validateAttrInList } from '../../helpers/validator';
+import { onEvent } from '../../services/lifecycleManager';
+import { getElementAttr, getElements } from '../../services/getter';
+import { validateAttrInList } from '../../services/validator';
 import {
   disableContextMenu,
   disableDrag,
   disableKeydown,
 } from './common/common';
-import PROMPT_MSG from '../../core/constants';
+import PROMPT_MSG from '../../config/constants';
 
 type PreventAction = 'left_click' | 'drag' | 'keydown';
 type PreventHandler = (elem: Element) => void;
