@@ -1,6 +1,6 @@
-import { PROMPT_MSG } from '../core/constants';
+import PROMPT_MSG from '../core/constants';
 
-export const validateElements = (
+const validateElements = (
   elements: NodeListOf<Element> | null,
 ): Element | NodeListOf<Element> => {
   if (!elements) {
@@ -10,14 +10,20 @@ export const validateElements = (
   return elements;
 };
 
-export const validateElementAttr = (attr: string, value: string): boolean => {
+const validateAttr = (attr: string, value: string): boolean => {
   return attr === value;
 };
 
-export const validateText = (text: string | null): string => {
+const validateAttrInList = (attr: string, validAttrs: string[]): boolean => {
+  return validAttrs.includes(attr);
+}
+
+const validateText = (text: string | null): string => {
   if (!text) {
     throw new Error(PROMPT_MSG.empty_text);
   }
 
   return text;
 };
+
+export { validateElements, validateAttr, validateAttrInList, validateText };
