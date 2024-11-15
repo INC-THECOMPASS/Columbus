@@ -1,8 +1,8 @@
-import { getElementAttr, getElements } from '../../helpers/getter';
-import { validateElementAttr, validateText } from '../../helpers/validator';
-import { onEvent } from '../../helpers/lifecycleManager';
+import { getElementAttr, getElements } from '../../services/getter';
+import { validateAttr, validateText } from '../../services/validator';
+import { onEvent } from '../../services/lifecycleManager';
 
-export const commaizeNumber = () => {
+const commaizeNumber = () => {
   const customAttr = 'tc-format-number';
   const attrValue = 'comma';
 
@@ -11,7 +11,7 @@ export const commaizeNumber = () => {
   elements.forEach((elem: Element) => {
     const attr = getElementAttr(elem, customAttr);
 
-    if (validateElementAttr(attr, attrValue)) {
+    if (validateAttr(attr, attrValue)) {
       const hasText = validateText(elem.textContent);
       const number = parseInt(hasText, 10);
 
@@ -23,3 +23,5 @@ export const commaizeNumber = () => {
 };
 
 onEvent('DOMContentLoaded', commaizeNumber);
+
+export default commaizeNumber;

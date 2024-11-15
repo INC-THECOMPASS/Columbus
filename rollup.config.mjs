@@ -6,12 +6,12 @@ const entries = [
   {
     input: 'src/utils/formats/index.ts',
     output: 'formats',
-    name: 'columbusFormats'
+    name: 'columbusFormats',
   },
   {
-    input: 'src/utils/functions/index.ts',
-    output: 'functions',
-    name: 'columbusFunctions'
+    input: 'src/utils/controls/index.ts',
+    output: 'controls',
+    name: 'columbusControls',
   },
 ];
 
@@ -22,14 +22,14 @@ const createConfig = ({ input, output, name }) => ({
     file: `dist/${output}.min.js`,
     format: 'umd',
     name,
-    sourcemap: true
+    sourcemap: true,
   },
   plugins: [
     typescript({
-      tsconfig: './tsconfig.json'
+      tsconfig: './tsconfig.json',
     }),
-    terser()
-  ]
+    terser(),
+  ],
 });
 
 export default entries.map(createConfig);
